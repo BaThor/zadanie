@@ -1,0 +1,678 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    font-family: 'Open Sans', sans-serif;
+}
+ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+* {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: transparent;
+    }
+/*-----------------------------------------------------*/
+/*-----------------------------------------------------*/
+/*-----------------------------------------------------*/
+/*-----------------------------------------------------*/
+/*-----------------------------------------------------*/
+main {
+    width: 1082px;
+    margin: auto;
+    background: #fff;
+}
+
+h1,h2,h3,h4 {
+    font-weight: 800;
+    color: #1089ce;
+    
+}
+
+p{
+    font-weight: 600;
+    line-height: 1.4;
+    color: #323232;
+}
+
+.blue_p{
+    color: #1089ce;
+}
+
+.heading-one h1{
+    font-size: 45px;
+    margin: 82px 0px 20px 0px;    
+}
+.heading-one p{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.heading-two h1{
+    font-size: 30px;
+    margin: 72px 0px 20px 0px;
+}
+
+.heading-two p{
+    font-size: 15px;
+}
+
+.heading-three h2{
+    font-size: 24px;
+    margin: 64px 0px 20px 0px;
+}
+
+.heading-three p{
+    font-size: 15px;
+}
+
+.heading-four h3{
+    font-size: 18px;
+    margin: 61px 0px 18px 0px;
+}
+
+.heading-four p{
+    font-size: 15px;
+}
+
+.heading-five h4{
+    font-size: 15px;
+    margin: 60px 0px 47px 0px;
+}
+
+.heading-five p{
+    font-size: 15px;
+}
+
+
+/*------------------------------------------------------------------*/
+/*----------------------LINKS--LIST---------------------------------*/
+/*----------------------LINKS--LIST---------------------------------*/
+/*----------------------LINKS--LIST---------------------------------*/
+/*------------------------------------------------------------------*/
+#linksList{
+    margin-bottom: 35px;
+}
+#linksList p{
+    font-size: 15px;
+}
+#linksList a{
+    font-weight: 600;
+    line-height: 2.0;
+    font-size: 15px;
+}
+#linksList a:link{
+    color: #1089ce;
+    text-decoration: none;
+}
+
+#linksList a:hover{
+    text-decoration: underline;  
+    
+}
+
+#linksList a:visited{
+    color: #92c4e0;
+}
+
+#linksList a:active{
+    color: #1089ce;    
+}
+
+/*------------------------------------------------------------------*/
+/*----------------------SQUARE--LIST---------------------------------*/
+/*----------------------SQUARE--LIST---------------------------------*/
+/*----------------------SQUARE--LIST---------------------------------*/
+/*------------------------------------------------------------------*/
+.squareList{
+    font-weight: 600;
+    color: #323232;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+.squareList li{
+    list-style-image: url('../square.png');
+    padding: 0px 0px 2px 0px;
+    line-height: 2.2;
+    list-style-position: inside;
+}
+
+/*------------------------------------------------------------------*/
+/*----------------------ROUNDED--LIST---------------------------------*/
+/*----------------------ROUNDED--LIST---------------------------------*/
+/*----------------------ROUNDED--LIST---------------------------------*/
+/*------------------------------------------------------------------*/
+#roundedList ol {
+    list-style:none;
+    counter-reset:mycounter;
+    padding:0;
+}
+#roundedList ol li {
+    position:relative; 
+    margin-left: 30px;
+    padding:10px 0px;
+    font-weight: 600;
+    font-size: 15px;
+}
+#roundedList ol li:before {
+    content:counter(mycounter); 
+    counter-increment:mycounter;
+    position:absolute;
+    top:7;
+    left:-30px;
+    width:22px;height:22px;line-height:22px;
+    border-radius:50%;
+    color:#fff;
+    font-weight: 600;
+    background-color: #1089ce;
+    text-align:center;
+}
+
+/*------------------------------------------------------------------*/
+/*----------------------LOREM--TABLE---------------------------------*/
+/*----------------------LOREM--TABLE---------------------------------*/
+/*----------------------LOREM--TABLE---------------------------------*/
+/*------------------------------------------------------------------*/
+.tables{
+    margin-top: 80px;
+    }
+
+#loremTable{
+    border: 1px solid #cccccc;
+    width: 71%;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+#loremTable th{
+    background-color: #dbedf8;
+    color: #1089ce;
+    font-weight: 800;
+}
+
+#loremTable th:first-child{
+    background-color: #bddef2;
+}
+
+#loremTable td,th {
+    padding: 16px;
+}
+
+#loremTable td:nth-child(1){
+    width: 23%;
+}
+#loremTable td:nth-child(2){
+    width: 39%;
+    text-align: center;
+}
+#loremTable td:nth-child(3){
+    width: 39%;
+    text-align: center;
+}
+#loremTable tr td:first-child{
+    background-color: #dbedf8;   
+}
+
+#loremTable tr,td{
+    border: none;
+    border-bottom: 1px solid #cccccc;
+}
+
+/*------------------------------------------------------------------*/
+/*----------------------RADIO--BUTTONS---------------------------------*/
+/*----------------------RADIO--BUTTONS---------------------------------*/
+/*----------------------RADIO--BUTTONS---------------------------------*/
+/*------------------------------------------------------------------*/
+.buttons{
+    margin-top: 60px;
+    width: 50%;
+    display:block;
+}
+
+#radioButton{
+    display:inline-block;
+    width: 50%;
+    float: left;
+}
+.radiobtn {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.radiobtn input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkradio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  border: 1px solid #cccccc;
+
+}
+
+.radiobtn input:checked ~ .checkradio {
+  background-color: #f9f9f9;
+  border: 1px solid #cccccc;
+}
+
+.checkradio:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radiobtn input:checked ~ .checkradio:after {
+  display: block;
+}
+
+.radiobtn .checkradio:after {
+ 	top: 4px;
+	left: 4px;
+	width: 7px;
+	height: 7px;
+	background: #2196F3;
+}
+
+/*------------------------------------------------------------------*/
+/*----------------------CHECKBOX--BUTTONS---------------------------------*/
+/*----------------------CHECKBOX--BUTTONS---------------------------------*/
+/*----------------------CHECKBOX--BUTTONS---------------------------------*/
+/*------------------------------------------------------------------*/
+#checkboxButton{
+    display:inline-block;
+    width: 50%;
+}
+/* The container */
+.checkbtn {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 15px;
+    font-weight: 600;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbtn input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: #fff;
+  border: 1px solid #cccccc;
+}
+
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbtn input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbtn .checkmark:after {
+  left: 7px;
+  bottom: 6px;
+  width: 6px;
+  height: 12px;
+  border: solid #1089ce;
+  border-width: 0px 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+
+/*------------------------------------------------------------------*/
+/*----------------------LOREM--FORM---------------------------------*/
+/*----------------------LOREM--FORM---------------------------------*/
+/*----------------------LOREM--FORM---------------------------------*/
+/*------------------------------------------------------------------*/
+.forms{
+    margin-top: 60px;
+}
+
+#contact{
+    width: 445px;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact option,
+#contact textarea,
+#contact button[type="submit"] {
+    font-weight: 600;
+    font-size: 15px;
+    color: #6a6a6a;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea {
+  width: 100%;
+  border: 1px solid #b8b8b8;
+  background: #f9f9f9;
+  margin: 20px 0 0;
+  padding: 14px;
+}
+
+
+#contact textarea {
+  height: 230px;
+  max-width: 100%;
+  resize: none;
+}
+
+#contact button[type="submit"] {
+    cursor: pointer;
+    width: 190px;
+    border: none;
+    background: #1089ce;
+    color: #FFF;
+    margin: 20px 0 0 18px;
+    padding: 17px;
+    font-size: 15px;
+    display:inline-block;
+    float: right;
+}
+
+#contact input {
+  margin: 0 .25rem;
+  min-width: 125px;
+  border: 1px solid #eee;
+  -webkit-transition: border-color .5s ease-out;
+  transition: border-color .5s ease-out;
+}
+
+#contact input:required:valid {
+  border: 1px solid #1089ce;
+}
+#contact input:invalid {
+  border: 1px solid #e73618;
+}
+#contact input:required:focus:valid {
+  background: url("../correct.png") no-repeat 97% 50%;
+  background-size: 20px;
+}
+#contact input:focus:invalid {
+  background: url("../wrong.png") no-repeat 97% 50%;
+  background-size: 20px;
+}
+
+
+/* ===== Select Box ===== */
+.sel {
+    font-size: 15px;
+    display: inline-block;
+    width: 443px;
+    position: relative;
+    cursor: pointer;
+    background: url(../dropdown.png) no-repeat 97% center; 
+    margin: 20px 0 0;
+}
+
+.sel__placeholder {
+    display: block;
+    font-size: 15px;
+    color: #6a6a6a;
+    font-weight: 600;
+    padding: 14px;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    visibility: visible;
+}
+
+.sel.active .sel__placeholder {
+    visibility: hidden;
+}
+
+.sel__placeholder::before {
+    position: absolute;
+    content: attr(data-placeholder);
+    visibility: hidden;
+}
+
+.sel.active .sel__placeholder::before {
+    visibility: visible;
+}
+
+.sel__box {
+    /*position: absolute;*/
+    display: none;
+    list-style-type: none;
+    text-align: left;
+    background-color: #f9f9f9;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #b8b8b8;  
+}
+
+.sel.active .sel__box {
+    display: block;
+    -webkit-animation: fadeInUp 500ms;
+          animation: fadeInUp 500ms;
+}
+
+.sel__box__options {
+    display: list-item;
+    font-size: 15px;
+    font-weight: 600;
+    color: #6a6a6a;
+    padding: 14px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.sel__box__options:hover {
+    background-color: #d6e8f3;
+}
+
+/* ----- Select Box Black Panther ----- */
+.sel {
+    border: 1px solid #b8b8b8;
+}
+
+.sel--black-panther {
+    z-index: 3;
+    background-color: #f9f9f9;     
+}
+/* ===== Keyframes ===== */
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20px, 0);
+            transform: translate3d(0, 20px, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20px, 0);
+            transform: translate3d(0, 20px, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------------------------------------*/
+/*----------------------IMAGE--FLOW---------------------------------*/
+/*----------------------IMAGE--FLOW---------------------------------*/
+/*----------------------IMAGE--FLOW---------------------------------*/
+/*------------------------------------------------------------------*/
+.imageFlow{  
+    margin-top: 160px;
+    font-size: 15px;
+    float: left;
+}
+
+.imageFlow section{
+    float:left;
+}
+.imageFlow section:first-child{
+    margin-bottom: 45px;
+}
+.imageFlow section:last-child{
+    margin-top: 60px;
+    margin-bottom: 190px;
+}
+.textFlow figure{
+    float: left;
+    display: inline-block;
+}
+.textFlow div{
+    width: 47%;
+    float: right;
+    display: inline-block;
+}
+
+.textFlow div p:first-child{
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

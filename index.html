@@ -1,7 +1,59 @@
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css"/> 
+    <link rel="stylesheet" type="text/css" href="css/style.css"/> 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800&amp;subset=latin-ext" rel="stylesheet">
+    
+    
+        <script>
+    /* ===== Logic for creating fake Select Boxes ===== */
+$('.sel').each(function() {
+  $(this).children('select').css('display', 'none');
+  
+  var $current = $(this);
+  
+  $(this).find('option').each(function(i) {
+    if (i == 0) {
+      $current.prepend($('<div>', {
+        class: $current.attr('class').replace(/sel/g, 'sel__box')
+      }));
+      
+      var placeholder = $(this).text();
+      $current.prepend($('<span>', {
+        class: $current.attr('class').replace(/sel/g, 'sel__placeholder'),
+        text: placeholder,
+        'data-placeholder': placeholder
+      }));
+      
+      return;
+    }
+    
+    $current.children('div').append($('<span>', {
+      class: $current.attr('class').replace(/sel/g, 'sel__box__options'),
+      text: $(this).text()
+    }));
+  });
+});
+
+// Toggling the `.active` state on the `.sel`.
+$('.sel').click(function() {
+  $(this).toggleClass('active');
+});
+
+// Toggling the `.selected` state on the options.
+$('.sel__box__options').click(function() {
+  var txt = $(this).text();
+  var index = $(this).index();
+  
+  $(this).siblings('.sel__box__options').removeClass('selected');
+  $(this).addClass('selected');
+  
+  var $currentSel = $(this).closest('.sel');
+  $currentSel.children('.sel__placeholder').text(txt);
+  $currentSel.children('select').prop('selectedIndex', index + 1);
+});
+    
+    </script> 
+    
 </head>
     <body>
         <main>
@@ -27,8 +79,8 @@
                 </section>     
             </article>   
             
-            <article class="lists">
-                <section id="links">
+            <article class="list">
+                <section id="linksList">
                     <p>Linki</p>
                     <ul>
                         <li><a href="1#">Donec placerat nisl magna, et faucibus arcu condimentum sed.</a></li>    
@@ -37,24 +89,24 @@
                     </ul>    
                 </section>
 
-                <section class="lists-1">
-                    <ul style="list-style-type:square">
+                <section class="squareList">
+                    <ul>
                       <li>predyspozycje psychofizyczne do wykonywania zawodu,</li>
                       <li>ukończone 18 lat,</li>
                       <li>aktualna książeczka zdrowia,</li>
                       <li>ukończona szkoła średniai.</li>   
                     </ul>                
                 </section>
-                <section class="lists-1">
-                    <ul style="list-style-type:square">
+                <section class="squareList">
+                    <ul>
                       <li>predyspozycje psychofizyczne do wykonywania zawodu,</li>
                       <li>ukończone 18 lat,</li>
                       <li>aktualna książeczka zdrowia,</li>
                       <li>ukończona szkoła średniai.</li>    
                     </ul>
                 </section>                
-                <section id="rounded">
-                    <ol class="rounded-list">
+                <section id="roundedList">
+                    <ol>
                         <li>Pozycja pierwsza</li>
                         <li>Pozycja druga</li>
                         <li>Pozycja trzecia</li>
@@ -62,7 +114,7 @@
                 </section>
             </article>
             <article class="tables">
-                <table id="tabelka">
+                <table id="loremTable">
                     <tr>
                         <th></th>
                         <th>LOREM IPUM</th> 
@@ -70,51 +122,51 @@
                     </tr>
                     <tr>
                         <td>Pozycja pierwsza</td>
-                        <td>Pozycja pierwsza</td>
-                        <td>Pozycja pierwsza</td>
+                        <td class="tac">Pozycja pierwsza</td>
+                        <td class="tac">Pozycja pierwsza</td>
                     </tr>
                     <tr>
                         <td>Pozycja druga</td>
-                        <td>Pozycja druga</td>
-                        <td>Pozycja druga</td>
+                        <td class="tac">Pozycja druga</td>
+                        <td class="tac">Pozycja druga</td>
                     </tr>
                     <tr>
                         <td>Pozycja trzecia</td>
-                        <td>Pozycja trzecia</td>
-                        <td>Pozycja trzecia</td>
+                        <td class="tac">Pozycja trzecia</td>
+                        <td class="tac">Pozycja trzecia</td>
                     </tr>
                     <tr>
                         <td>Pozycja czwarta</td>
-                        <td>Pozycja czwarta</td>
-                        <td>Pozycja czwarta</td>
+                        <td class="tac">Pozycja czwarta</td>
+                        <td class="tac">Pozycja czwarta</td>
                     </tr>    
                 </table>
             </article>
             <article class="buttons">
-                <section style="display:inline-block">
-                    <label class="containerxd">Pozycja pierwsza
+                <section id="radioButton">
+                    <label class="radiobtn">Pozycja pierwsza
                       <input type="radio" checked="checked" name="radio">
-                      <span class="checkmarkxd"></span>
+                      <span class="checkradio"></span>
                     </label>
-                    <label class="containerxd">Pozycja druga
+                    <label class="radiobtn">Pozycja druga
                       <input type="radio" name="radio">
-                      <span class="checkmarkxd"></span>
+                      <span class="checkradio"></span>
                     </label>
-                    <label class="containerxd">Pozycja trzecia
+                    <label class="radiobtn">Pozycja trzecia
                       <input type="radio" name="radio">
-                      <span class="checkmarkxd"></span>
+                      <span class="checkradio"></span>
                     </label>
                 </section>
-                <section style="display:inline-block">   
-                    <label class="container">Pozycja pierwsza
+                <section id="checkboxButton">   
+                    <label class="checkbtn">Pozycja pierwsza
+                      <input type="checkbox" checked="checked">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="checkbtn">Pozycja druga
                       <input type="checkbox">
                       <span class="checkmark"></span>
                     </label>
-                    <label class="container">Pozycja druga
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="container">Pozycja trzecia
+                    <label class="checkbtn">Pozycja trzecia
                       <input type="checkbox">
                       <span class="checkmark"></span>
                     </label>
@@ -124,19 +176,23 @@
             <article class="forms">
                 <form id="contact" action="" method="post">
                     <input placeholder="Lorem ipsum" type="text"> 
+                    <input placeholder="Lorem ipsum" type="email" required> 
+                    <input placeholder="Lorem ipsum" type="text" required> 
                     <input placeholder="Lorem ipsum" type="text"> 
-                    <input placeholder="Lorem ipsum" type="text"> 
-                    <input placeholder="Lorem ipsum" type="text"> 
-                    <select>
-                        <option value="1">Lorem ipsum</option>
-                        <option value="2">Lorem ipsum dolorem</option>
-                        <option value="3">Lorem ipsum dolorem</option>
-                        <option value="4">Lorem ipsum dolorem</option>
-                        <option value="5">Lorem ipsum dolorem</option>
-                    </select>       
+                      <div class="sel sel--black-panther">
+                      <select name="select-profession" id="select-profession">
+                        <option value="" disabled>Lorem ipsum</option>
+                        <option value="gamer">Lorem ipsum dolorem</option>
+                        <option value="developer">Lorem ipsum dolorem</option>
+                        <option value="programmer">Lorem ipsum dolorem</option>
+                        <option value="designer">Lorem ipsum dolorem</option>
+                      </select>
+                    </div>  
                     <textarea></textarea>
+                    <div>
                     <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">WYŚLIJ</button>
                     <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">WYŚLIJ</button>    
+                    </div>    
                 </form>
             
             </article>
@@ -149,15 +205,20 @@
                 <section>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum venenatis justo cursus elit vulputate posuere. Pellentesque at varius massa. Duis ut cursus arcu, ac pellentesque dui. Proin commodo mauris quam, ut blandit felis maximus non. Vestibulum rhoncus justo quis augue interdum consectetur. In vestibulum porttitor justo, sit amet congue metus eleifend iaculis. Nullam auctor diam ac eros condimentum, eu ultricies risus dictum. Curabitur vehicula, nisl in viverra lobortis, quam mauris viverra velit, et consequat ipsum quam id ipsum. Maecenas eget felis nisl. Maecenas felis enim, finibus sit amet sem eget, malesuada faucibus ipsum. </p>
                 </section>
-                <section>
-                <figure><img src="image.jpg"></figure>    
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum venenatis justo cursus elit vulputate posuere. Pellentesque at varius massa. Duis ut cursus arcu, ac pellentesque dui. Proin commodo mauris quam, ut blandit felis maximus non. Vestibulum rhoncus justo quis augue interdum consectetur. In vestibulum porttitor justo, sit amet congue metus eleifend iaculis. Nullam auctor diam ac eros condimentum, eu ultricies risus dictum. Curabitur vehicula, nisl in viverra lobortis, quam mauris viverra velit, et consequat ipsum quam id ipsum. Maecenas eget felis nisl. Maecenas felis enim, finibus sit amet sem eget, malesuada faucibus ipsum. </p>                
+                <section class="textFlow">
+                    <figure><img src="image.jpg"></figure>    
+                    <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum venenatis justo cursus elit vulputate posuere. Pellentesque at varius massa. Duis ut cursus arcu, ac pellentesque dui. Proin commodo mauris quam, ut blandit felis maximus non.</p> 
+                        <p>Vestibulum rhoncus justo quis augue interdum consectetur. In vestibulum porttitor justo, sit amet congue metus eleifend iaculis. Nullam auctor diam ac eros condimentum, eu ultricies risus dictum. Curabitur vehicula, nisl in viverra lobortis, quam mauris viverra velit, et consequat ipsum quam id ipsum. Maecenas eget felis nisl. Maecenas felis enim, finibus sit amet sem eget, malesuada faucibus ipsum. </p>   
+                    </div>    
                 </section>
 
                 <section>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum venenatis justo cursus elit vulputate posuere. Pellentesque at varius massa. Duis ut cursus arcu, ac pellentesque dui. Proin commodo mauris quam, ut blandit felis maximus non. Vestibulum rhoncus justo quis augue interdum consectetur. In vestibulum porttitor justo, sit amet congue metus eleifend iaculis. Nullam auctor diam ac eros condimentum, eu ultricies risus dictum. Curabitur vehicula, nisl in viverra lobortis, quam mauris viverra velit, et consequat ipsum quam id ipsum. Maecenas eget felis nisl. Maecenas felis enim, finibus sit amet sem eget, malesuada faucibus ipsum. </p>
+                    <p style="float: left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum venenatis justo cursus elit vulputate posuere. Pellentesque at varius massa. Duis ut cursus arcu, ac pellentesque dui. Proin commodo mauris quam, ut blandit felis maximus non. Vestibulum rhoncus justo quis augue interdum consectetur. In vestibulum porttitor justo, sit amet congue metus eleifend iaculis. Nullam auctor diam ac eros condimentum, eu ultricies risus dictum. Curabitur vehicula, nisl in viverra lobortis, quam mauris viverra velit, et consequat ipsum quam id ipsum. Maecenas eget felis nisl. Maecenas felis enim, finibus sit amet sem eget, malesuada faucibus ipsum. </p>
                 </section>
             </article>
-        </main>    
+        </main>  
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src="js/index.js"></script>
+   
     </body>
 </html>
