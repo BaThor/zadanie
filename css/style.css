@@ -2,7 +2,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -48,41 +47,36 @@ table {
 	border-spacing: 0;
 }
 * {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        outline: 0;
-        font-size: 100%;
-        vertical-align: baseline;
-        background: transparent;
-    }
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
 /*-----------------------------------------------------*/
-/*-----------------------------------------------------*/
-/*-----------------------------------------------------*/
-/*-----------------------------------------------------*/
+/*--------------------HEADINGS-------------------------*/
+/*--------------------HEADINGS-------------------------*/
+/*--------------------HEADINGS-------------------------*/
 /*-----------------------------------------------------*/
 main {
     width: 1082px;
     margin: auto;
     background: #fff;
 }
-
 h1,h2,h3,h4 {
     font-weight: 800;
-    color: #1089ce;
-    
+    color: #1089ce;  
 }
-
 p{
     font-weight: 600;
     line-height: 1.4;
     color: #323232;
 }
-
 .blue_p{
     color: #1089ce;
 }
-
 .heading-one h1{
     font-size: 45px;
     margin: 82px 0px 20px 0px;    
@@ -91,43 +85,34 @@ p{
     font-size: 18px;
     font-weight: 600;
 }
-
 .heading-two h1{
     font-size: 30px;
     margin: 72px 0px 20px 0px;
 }
-
 .heading-two p{
     font-size: 15px;
 }
-
 .heading-three h2{
     font-size: 24px;
     margin: 64px 0px 20px 0px;
 }
-
 .heading-three p{
     font-size: 15px;
 }
-
 .heading-four h3{
     font-size: 18px;
     margin: 61px 0px 18px 0px;
 }
-
 .heading-four p{
     font-size: 15px;
 }
-
 .heading-five h4{
     font-size: 15px;
     margin: 60px 0px 47px 0px;
 }
-
 .heading-five p{
     font-size: 15px;
 }
-
 
 /*------------------------------------------------------------------*/
 /*----------------------LINKS--LIST---------------------------------*/
@@ -149,16 +134,12 @@ p{
     color: #1089ce;
     text-decoration: none;
 }
-
 #linksList a:hover{
-    text-decoration: underline;  
-    
+    text-decoration: underline;   
 }
-
 #linksList a:visited{
     color: #92c4e0;
 }
-
 #linksList a:active{
     color: #1089ce;    
 }
@@ -220,29 +201,24 @@ p{
 /*------------------------------------------------------------------*/
 .tables{
     margin-top: 80px;
-    }
-
+}
 #loremTable{
     border: 1px solid #cccccc;
     width: 71%;
     font-weight: 600;
     font-size: 15px;
 }
-
 #loremTable th{
     background-color: #dbedf8;
     color: #1089ce;
     font-weight: 800;
 }
-
 #loremTable th:first-child{
     background-color: #bddef2;
 }
-
 #loremTable td,th {
     padding: 16px;
 }
-
 #loremTable td:nth-child(1){
     width: 23%;
 }
@@ -257,7 +233,6 @@ p{
 #loremTable tr td:first-child{
     background-color: #dbedf8;   
 }
-
 #loremTable tr,td{
     border: none;
     border-bottom: 1px solid #cccccc;
@@ -273,7 +248,6 @@ p{
     width: 50%;
     display:block;
 }
-
 #radioButton{
     display:inline-block;
     width: 50%;
@@ -292,38 +266,31 @@ p{
     -ms-user-select: none;
     user-select: none;
 }
-
 .radiobtn input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
 }
-
 .checkradio {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 15px;
-  width: 15px;
-  border: 1px solid #cccccc;
-
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    border: 1px solid #cccccc;
 }
-
 .radiobtn input:checked ~ .checkradio {
-  background-color: #f9f9f9;
-  border: 1px solid #cccccc;
+    background-color: #f9f9f9;
+    border: 1px solid #cccccc;
 }
-
 .checkradio:after {
-  content: "";
-  position: absolute;
-  display: none;
+    content: "";
+    position: absolute;
+    display: none;
 }
-
 .radiobtn input:checked ~ .checkradio:after {
-  display: block;
+    display: block;
 }
-
 .radiobtn .checkradio:after {
  	top: 4px;
 	left: 4px;
@@ -341,55 +308,48 @@ p{
     display:inline-block;
     width: 50%;
 }
-/* The container */
+/* container */
 .checkbtn {
-  display: block;
-  position: relative;
-  padding-left: 25px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 15px;
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 15px;
     font-weight: 600;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
-
 /* Hide the browser's default checkbox */
 .checkbtn input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
 }
-
 /* Create a custom checkbox */
 .checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 16px;
-  width: 16px;
-  background-color: #fff;
-  border: 1px solid #cccccc;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: #fff;
+    border: 1px solid #cccccc;
 }
-
-
-
-/* Create the checkmark/indicator (hidden when not checked) */
+/* Create the checkmark/indicator */
 .checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
+    content: "";
+    position: absolute;
+    display: none;
 }
-
 /* Show the checkmark when checked */
 .checkbtn input:checked ~ .checkmark:after {
-  display: block;
+    display: block;
 }
-
 /* Style the checkmark/indicator */
 .checkbtn .checkmark:after {
   left: 7px;
@@ -401,8 +361,6 @@ p{
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-
-
 
 /*------------------------------------------------------------------*/
 /*----------------------LOREM--FORM---------------------------------*/
@@ -427,25 +385,17 @@ p{
     font-weight: 600;
     font-size: 15px;
     color: #6a6a6a;
+    width: 100%;
+    border: 1px solid #b8b8b8;
+    background: #f9f9f9;
+    margin: 20px 0 0;
+    padding: 14px;    
 }
 
-#contact input[type="text"],
-#contact input[type="email"],
-#contact input[type="tel"],
-#contact input[type="url"],
 #contact textarea {
-  width: 100%;
-  border: 1px solid #b8b8b8;
-  background: #f9f9f9;
-  margin: 20px 0 0;
-  padding: 14px;
-}
-
-
-#contact textarea {
-  height: 230px;
-  max-width: 100%;
-  resize: none;
+    height: 230px;
+    max-width: 100%;
+    resize: none;
 }
 
 #contact button[type="submit"] {
@@ -470,22 +420,146 @@ p{
 }
 
 #contact input:required:valid {
-  border: 1px solid #1089ce;
+    border: 1px solid #1089ce;
 }
 #contact input:invalid {
-  border: 1px solid #e73618;
+    border: 1px solid #e73618;
 }
 #contact input:required:focus:valid {
-  background: url("../correct.png") no-repeat 97% 50%;
-  background-size: 20px;
+    background: url("../correct.png") no-repeat 97% 50%;
+    background-size: 20px;
 }
 #contact input:focus:invalid {
-  background: url("../wrong.png") no-repeat 97% 50%;
-  background-size: 20px;
+    background: url("../wrong.png") no-repeat 97% 50%;
+    background-size: 20px;
+}
+
+.tooltip-right{
+    right:10px;
+    top:-33px; 
+    float: right; 
+}
+
+/* Base styles for the element that has a tooltip */
+[data-tooltip],
+.tooltip {
+  position: relative;
+  cursor: pointer;
 }
 
 
-/* ===== Select Box ===== */
+/**************************************/
+/******** Tooltip/Podpowiedz *********/
+/*************************************/
+[data-tooltip]:before,
+[data-tooltip]:after,
+.tooltip:before,
+.tooltip:after {
+  position: absolute;
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: 
+	  opacity 0.2s ease-in-out,
+		visibility 0.2s ease-in-out,
+		-webkit-transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+	transition: opacity 0.2s ease-in-out,
+		visibility 0.2s ease-in-out,
+		-webkit-transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+	transition: opacity 0.2s ease-in-out,
+		visibility 0.2s ease-in-out,
+		transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+	transition:         
+		opacity 0.2s ease-in-out,
+		visibility 0.2s ease-in-out,
+		transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24),
+		-webkit-transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform:         translate3d(0, 0, 0);
+  pointer-events: none;
+}
+
+/* Show the entire tooltip on hover and focus */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after,
+[data-tooltip]:focus:before,
+[data-tooltip]:focus:after,
+.tooltip:hover:before,
+.tooltip:hover:after,
+.tooltip:focus:before,
+.tooltip:focus:after {
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+/* Base styles for the tooltip's directional arrow */
+.tooltip:before,
+[data-tooltip]:before {
+  z-index: 1001;
+  border: 6px solid transparent;
+  background: transparent;
+  content: "";
+}
+
+/* Base styles for the tooltip's content area */
+.tooltip:after,
+[data-tooltip]:after {
+    z-index: 1000;
+    padding: 10px;
+    width: 197px;
+    height: 80px;
+    background-color: #1089ce;
+    color: #fff;
+    font-weight: 600;
+    content: attr(data-tooltip);
+    font-size: 13px;
+    line-height: 1.4;
+    margin-left: 10px;
+}
+
+/* Directions */
+
+/* Right */
+.tooltip-right:before,
+.tooltip-right:after {
+  top: -100%;
+  left: 100%;
+}
+
+.tooltip-right:before {
+  margin-bottom: 0;
+  margin-left: -2px;
+  border-top-color: transparent;
+  border-right-color: #1089ce;
+}
+
+.tooltip-right:hover:before,
+.tooltip-right:hover:after,
+.tooltip-right:focus:before,
+.tooltip-right:focus:after {
+  -webkit-transform: translateX(12px);
+  transform:         translateX(12px); 
+}
+
+/* Move directional arrows down a bit for left/right tooltips */
+.tooltip-left:before,
+.tooltip-right:before {
+  top: 3px;
+}
+
+/* Vertically center tooltip content for left/right tooltips */
+.tooltip-left:after,
+.tooltip-right:after {
+  margin-left: 10px;
+  margin-bottom: -16px;
+}
+
+/**********************************/
+/* ===== Select/Option Box ===== */
+/*********************************/
 .sel {
     font-size: 15px;
     display: inline-block;
@@ -493,7 +567,7 @@ p{
     position: relative;
     cursor: pointer;
     background: url(../dropdown.png) no-repeat 97% center; 
-    margin: 20px 0 0;
+    margin: 0 0 0;
 }
 
 .sel__placeholder {
@@ -525,7 +599,6 @@ p{
 }
 
 .sel__box {
-    /*position: absolute;*/
     display: none;
     list-style-type: none;
     text-align: left;
@@ -538,7 +611,7 @@ p{
 .sel.active .sel__box {
     display: block;
     -webkit-animation: fadeInUp 500ms;
-          animation: fadeInUp 500ms;
+    animation: fadeInUp 500ms;
 }
 
 .sel__box__options {
@@ -573,7 +646,7 @@ p{
     -webkit-transform: translate3d(0, 20px, 0);
             transform: translate3d(0, 20px, 0);
   }
-
+    
   to {
     opacity: 1;
     -webkit-transform: none;
@@ -614,22 +687,6 @@ p{
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*------------------------------------------------------------------*/
 /*----------------------IMAGE--FLOW---------------------------------*/
 /*----------------------IMAGE--FLOW---------------------------------*/
@@ -664,6 +721,7 @@ p{
 .textFlow div p:first-child{
     margin-bottom: 30px;
 }
+
 
 
 
